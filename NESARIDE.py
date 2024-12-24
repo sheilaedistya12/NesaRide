@@ -116,8 +116,8 @@ GOOGLE_MAPS_API_KEY = "AIzaSyALLSRepqj68uMkUqxrGWU1X8hKzTo3afw"
 # Load driver data with error handling
 def load_driver_data():
     try:
-        drivers_liwet = pd.read_csv('C:\\sheila edistya\\Semester 3\\Desain dan Analisis Algoritma\\driver unesa lidah wetan.csv')
-        drivers_ktt = pd.read_csv('C:\\sheila edistya\\Semester 3\\Desain dan Analisis Algoritma\\driver unesa ketintang.csv')
+        drivers_liwet = pd.read_csv('driver unesa lidah wetan.csv')
+        drivers_ktt = pd.read_csv('driver unesa ketintang.csv')
         return pd.concat([drivers_liwet, drivers_ktt])
     except FileNotFoundError:
         st.error("File driver data tidak ditemukan. Harap unggah file yang diperlukan.")
@@ -132,7 +132,7 @@ all_drivers = load_driver_data()
 
 # Fungsi untuk halaman login
 def login():
-    logo = Image.open('C:\\sheila edistya\\Semester 3\\Desain dan Analisis Algoritma\\icon nesaride\\Logo NesaRide.png')
+    logo = Image.open('Logo NesaRide.png')
 
     col1, col2 = st.columns([2, 3])
     with col1:
@@ -153,7 +153,7 @@ def login():
 
 # Fungsi untuk halaman sign up
 def sign_up():
-    logo = Image.open('C:\\sheila edistya\\Semester 3\\Desain dan Analisis Algoritma\\icon nesaride\\Logo NesaRide.png')
+    logo = Image.open('Logo NesaRide.png')
 
     col1, col2 = st.columns([2, 3])
     with col1:
@@ -180,7 +180,7 @@ def home():
     # Reset status konfirmasi selesai saat halaman home diakses
     st.session_state.konfirmasi_selesai = False
 
-    image_path = 'C:/sheila edistya/Semester 3/Desain dan Analisis Algoritma/icon nesaride/gedung rektorat.png'  
+    image_path = 'gedung rektorat.png'  
     st.image(image_path, use_container_width=True)  
 
     st.markdown("<h1 style='text-align: center; color: black;'>Selamat datang Di <span style='color: #1F4529;'>NesaRide</span> website</h1>", unsafe_allow_html=True)
@@ -293,7 +293,7 @@ def konfirmasi():
     # Menampilkan gambar uang dengan posisi tengah
     col1, col2, col3 = st.columns([1.5, 1, 1.5])  # Membuat kolom untuk posisi tengah
     with col2:
-        uang_image = Image.open('C:/sheila edistya/Semester 3/Desain dan Analisis Algoritma/icon nesaride/tunai.png')
+        uang_image = Image.open('tunai.png')
         st.image(uang_image, use_container_width=False, width=200)
 
     # Menampilkan informasi pembayaran
