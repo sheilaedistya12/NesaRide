@@ -1,6 +1,0 @@
-streamlit
-folium
-pandas
-streamlit-folium
-Pillow
-requests
