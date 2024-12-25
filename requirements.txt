@@ -1,4 +1,6 @@
 streamlit
 folium
 pandas
-time
+streamlit-folium
+Pillow
+requests
